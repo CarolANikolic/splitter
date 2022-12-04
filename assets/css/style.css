@@ -1,0 +1,401 @@
+/* Colors */
+:root {
+    --strongCyan: hsl(172, 67%, 45%);
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan: hsl(186, 14%, 43%);
+    --grayishCyan: hsl(184, 14%, 56%);
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    --veryLightGrayishCyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Font family */
+    --fontMono: 'Space Mono', monospace;
+}
+
+html {
+    background-color: var(--lightGrayishCyan);
+    font-family: var(--fontMono); 
+}
+
+.body {
+    height: 100vh;  
+}
+
+.index-logo {
+    display: flex;
+}
+
+.index-logo img {
+    margin: 0 auto;
+}
+
+.main-index-container {
+    background-color: var(--lightGrayishCyan);
+    box-sizing: border-box;
+    width: 100%;
+    background-color: red;
+    margin: 0 auto;
+}
+
+.index-form {
+    background-color: var(--white);
+    width: 100%;
+    /* position: absolute; */
+    box-sizing: border-box;
+    border-radius: 20px 20px 0 0;
+    gap: 5%;
+}
+
+.section-input, .section-output {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.bill {
+    display: flex;
+    flex-direction: column;
+}
+
+/* positioning svg icons -testing */
+/* .text-bill {
+    position: relative;
+}
+
+.dolar-icon {
+    position: absolute;
+    display: inline-block;
+    left: 13%;
+    margin-top: 10%;
+
+  }
+
+.text-people {
+    position: relative;
+}
+
+.person-icon {
+    position: absolute;
+    display: inline-block;
+    left: 13%;
+    top: 10%;
+  } */
+
+  /* Labels style */
+.label-input {
+    color: var(--darkGrayishCyan);
+    padding-bottom: 3%;
+}
+
+.text-bill, .number-people > input {
+    background-color: var(--veryLightGrayishCyan);
+    position: relative;
+    padding: 3%;
+    border: none;
+    border-radius: 10px;
+}
+
+.text-bill, .number-people:hover {
+    cursor: text;
+}
+
+.tip-selection {
+    padding-top: 5%;
+}
+
+.tip-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    gap: 8% 3%;
+    justify-items: left; 
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+.tip-options input[type=button] {
+    background-color: var(--veryDarkCyan);
+    width: 100%;
+    border-style: none;
+    border-radius: 5px;
+    padding: 3% 0 3% 0;
+    font-family: var(--fontMono);
+    color: var(--white);
+    font-size: 1em;
+}
+
+.tip-options input[type=button]:hover {
+    cursor: pointer;
+}
+
+.tip-options > input:nth-child(6) {
+    background-color: var(--veryLightGrayishCyan);
+    color: var(--veryDarkCyan);   
+}
+
+.number-people {
+    padding: 10% 0 10% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.tip-result {
+    background-color: var(--veryDarkCyan);
+    box-sizing: border-box;
+    padding: 10%;
+    border-radius: 10px;
+}
+
+.tip-result output {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    font-size: 1.5em;
+    color: var(--strongCyan);
+}
+
+.tip-result > div:nth-child(2) {
+    padding-top: 10%;
+}
+
+.tip-result-labels {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.tip-result-labels label {
+    color: var(--white);
+    font-size: 0.8em;
+    line-height: 2;
+}
+
+.tip-result-labels p {
+    color: var(--lightGrayishCyan);
+}
+
+.tip-result input[type='button'] {
+    margin-top: 10%;
+    border-style: none;
+    border-radius: 3px;
+    padding: 3%;
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+    font-family: var(--fontMono);
+    text-transform: uppercase;
+}
+
+/* Mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
+    .index-logo img {
+        width: 20%;
+        padding: 10%;
+    }
+
+    .index-form {
+        padding: 10%;
+    }
+
+    .label-input {
+        font-size: 0.8em;
+    }
+
+    .tip-options input[type=button] {
+        font-size: 1em;
+    }
+
+    .tip-result output {
+        font-size: 1.5em;
+    }
+
+    .tip-result-labels p {
+        font-size: 0.5em;
+    }
+
+    .tip-result input[type='button'] {
+        font-size: 0.8em;
+    }
+}
+
+/* iPads, Tablets */
+
+@media (min-width: 481px) {
+    .index-logo img {
+        width: 15%;
+        padding: 5%;
+    }
+
+    .index-form {
+        width: 90%; 
+        border-radius: 20px;
+        padding: 5%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .label-input {
+        font-size: 1em;
+    }
+
+    .tip-options {
+        gap: 8% 3%;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .tip-options input[type=button] {
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .tip-result {
+        height: 305px;
+    }
+
+    .tip-result output {
+        font-size: 2em;
+    }
+
+    .tip-result-labels label {
+        font-size: 1em;
+    }
+
+    .tip-result-labels p {
+        font-size: 0.6em;
+    }
+
+    .tip-result input[type='button'] {
+        margin-top: 50%;
+        font-size: 0.8em;
+    }
+}
+
+/* Small screens, laptops */
+@media (min-width: 768px) {
+    .index-logo img {
+        width: 5%;
+        padding: 5%;
+    }
+
+    .index-form {
+        width: 60%; 
+        border-radius: 20px;
+        padding: 3%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .label-input {
+        font-size: 1em;
+    }
+
+    .tip-options {
+        gap: 8% 3%;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .tip-options input[type=button] {
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .tip-result {
+        height: 300px;
+    }
+
+    .tip-result output {
+        font-size: 2em;
+    }
+
+    .tip-result-labels label {
+        font-size: 1em;
+    }
+
+    .tip-result-labels p {
+        font-size: 0.6em;
+    }
+
+    .tip-result input[type='button'] {
+        margin-top: 70%;
+        font-size: 0.8em;
+    }
+}
+
+/* Desktops, large screens */
+@media (min-width: 1024px) {
+    .index-logo img {
+        width: 5%;
+        padding: 5%;
+    }
+
+    .index-form {
+        width: 40%; 
+        border-radius: 20px;
+        padding: 3%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .label-input {
+        font-size: 1em;
+    }
+
+    .tip-options {
+        gap: 8% 3%;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .tip-options input[type=button] {
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .tip-result {
+        height: 300px;
+    }
+
+    .tip-result output {
+        font-size: 2em;
+    }
+
+    .tip-result-labels label {
+        font-size: 1em;
+    }
+
+    .tip-result-labels p {
+        font-size: 0.6em;
+    }
+
+    .tip-result input[type='button'] {
+        margin-top: 70%;
+        font-size: 0.8em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
