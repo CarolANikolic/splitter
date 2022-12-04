@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="calculator, tip, total value with tip">
+    <meta description="description" content="Calculate the tip and get the total ammount to pay per person.">
+    <title>Splitter - Tip Calculator</title>
+</head>
+<body>
+    <header>
+        <img src="assets/images/logo.svg" alt="Splitter tip calculator's logo">
+    </header>
+
+    <main>
+        <form>
+            <label for="bill">Bill</label>
+            <input type="text" name="bill">
+
+            <label for="select-tip">Select tip</label>
+            <input type="button" name="select-tip" value="5%">
+            <input type="button" name="select-tip" value="10%">
+            <input type="button" name="select-tip" value="15%">
+            <input type="button" name="select-tip" value="25%">
+            <input type="button" name="select-tip" value="50%">
+            <input type="button" name="select-tip" value="Custom">
+
+            <label for="number-people">Number of people</label>
+            <input type="number" name="number-people" min="1">
+
+            <label for="amount-tip">Tip amount</label>
+            <p> / person</p>
+            <output type="number" name="amount-tip"></output>
+            <label for="total">Total</label>
+            <output type="number" name="total"></output>
+            <p> / person</p>
+
+            <input type="button" value="Reset">
+        </form>
+    </main>
+
+    <footer class="atribution">
+        <p>Challenge by <a href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank">Frontend Mentor</a>. 
+            Coded with ❤️ by <a href="https://github.com/CarolANikolic" target="_blank">Caroline Almeida Nikolic</a>.</p>
+    </footer>
+</body>
+</html>
