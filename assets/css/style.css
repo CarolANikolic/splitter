@@ -33,7 +33,6 @@ html {
     background-color: var(--lightGrayishCyan);
     box-sizing: border-box;
     width: 100%;
-    background-color: red;
     margin: 0 auto;
 }
 
@@ -58,30 +57,6 @@ html {
     flex-direction: column;
 }
 
-/* positioning svg icons -testing */
-/* .text-bill {
-    position: relative;
-}
-
-.dolar-icon {
-    position: absolute;
-    display: inline-block;
-    left: 13%;
-    margin-top: 10%;
-
-  }
-
-.text-people {
-    position: relative;
-}
-
-.person-icon {
-    position: absolute;
-    display: inline-block;
-    left: 13%;
-    top: 10%;
-  } */
-
   /* Labels style */
 .label-input {
     color: var(--darkGrayishCyan);
@@ -96,8 +71,22 @@ html {
     border-radius: 10px;
 }
 
-.text-bill, .number-people:hover {
-    cursor: text;
+.text-bill:hover, .number-people:hover {
+    cursor: pointer;
+}
+
+.text-bill::placeholder, .text-people::placeholder {
+    text-align: left;
+    font-family: var(--fontMono);
+    color: var(--grayishCyan);
+    font-size: 1em;
+}
+
+.text-bill, .text-people {
+    text-align: right;
+    color: var(--veryDarkCyan);
+    font-family: var(--fontMono);
+    font-size: 1em;
 }
 
 .tip-selection {
@@ -221,7 +210,6 @@ html {
 }
 
 /* iPads, Tablets */
-
 @media (min-width: 481px) {
     .index-logo img {
         width: 15%;
@@ -238,6 +226,7 @@ html {
 
     .label-input {
         font-size: 1em;
+        padding-top: 10%;
     }
 
     .tip-options {
@@ -289,6 +278,7 @@ html {
 
     .label-input {
         font-size: 1em;
+        padding-top: 15%;
     }
 
     .tip-options {
@@ -311,6 +301,7 @@ html {
 
     .tip-result-labels label {
         font-size: 1em;
+        line-height: 3;
     }
 
     .tip-result-labels p {
@@ -318,13 +309,18 @@ html {
     }
 
     .tip-result input[type='button'] {
-        margin-top: 70%;
+        margin-top: 60%;
         font-size: 0.8em;
     }
 }
 
 /* Desktops, large screens */
 @media (min-width: 1024px) {
+
+    /* .section-input {
+        padding-top: 10%;
+    } */
+
     .index-logo img {
         width: 5%;
         padding: 5%;
@@ -340,11 +336,13 @@ html {
 
     .label-input {
         font-size: 1em;
+        padding-top: 10%;
     }
 
     .tip-options {
         gap: 8% 3%;
         grid-template-columns: 1fr 1fr 1fr;
+        
     }
 
     .tip-options input[type=button] {
@@ -362,6 +360,7 @@ html {
 
     .tip-result-labels label {
         font-size: 1em;
+        line-height: 3;
     }
 
     .tip-result-labels p {
@@ -369,7 +368,7 @@ html {
     }
 
     .tip-result input[type='button'] {
-        margin-top: 70%;
+        margin-top: 60%;
         font-size: 0.8em;
     }
 }
