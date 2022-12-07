@@ -18,7 +18,14 @@ html {
 }
 
 .body {
-    height: 100vh;  
+    height: 100vh; 
+}
+
+/* Warning span */
+
+.warning {
+    color: tomato;
+    font-size: 0.5em;
 }
 
 .index-logo {
@@ -39,7 +46,6 @@ html {
 .index-form {
     background-color: var(--white);
     width: 100%;
-    /* position: absolute; */
     box-sizing: border-box;
     border-radius: 20px 20px 0 0;
     gap: 5%;
@@ -102,10 +108,18 @@ html {
     justify-items: left; 
     box-sizing: border-box;
     width: 100%;
+    position: relative;
 }
 
+/* Make the circle of the input radio button invisible */
+ input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
 
-.tip-options input[type=button] {
+/* Style the button by styling the label so it gets the desired visual */
+  .tip-options label, .tip-options input {
     background-color: var(--veryDarkCyan);
     width: 100%;
     border-style: none;
@@ -114,15 +128,26 @@ html {
     font-family: var(--fontMono);
     color: var(--white);
     font-size: 1em;
+    text-align: center;
 }
 
-.tip-options input[type=button]:hover {
+.tip-options input[type="text"]::placeholder {
+    color: var(--white);
+    padding: 3%;
+    font-size: 0.9em;
+}
+
+.tip-options input:hover {
     cursor: pointer;
 }
 
 .tip-options > input:nth-child(6) {
     background-color: var(--veryLightGrayishCyan);
     color: var(--veryDarkCyan);   
+}
+
+.tip-options > input:nth-child(6) {
+    text-align: center;
 }
 
 .number-people {
@@ -255,7 +280,7 @@ html {
         font-size: 0.6em;
     }
 
-    .tip-result input[type='button'] {
+    .tip-result input {
         margin-top: 50%;
         font-size: 0.8em;
     }
@@ -278,7 +303,7 @@ html {
 
     .label-input {
         font-size: 1em;
-        padding-top: 15%;
+        padding-top: 10%;
     }
 
     .tip-options {
@@ -316,10 +341,6 @@ html {
 
 /* Desktops, large screens */
 @media (min-width: 1024px) {
-
-    /* .section-input {
-        padding-top: 10%;
-    } */
 
     .index-logo img {
         width: 5%;
