@@ -2,14 +2,10 @@
 const bill = document.getElementById('bill');
 const numberPeople = document.getElementById('number-people');
 
-// ???? how to get bill and people value to add on function????
-let billAmmount = document.getElementById('bill').value;
-let people = numberPeople.value;
-
-
 // Get spans
 const warningBill = document.getElementById('warning-bill');
 const warningNumberPeople = document.getElementById('warning-number-people');
+
 
 // Verification input field
 // Add event listener for bill input field
@@ -44,4 +40,30 @@ const verifyPeople = () => {
         warningNumberPeople.textContent = '';
     }
 }
+
+
+// Calculate tip 
+function getRadioValue() {
+    let radio = document.getElementsByTagName('input');
+    for(i = 0; i < radio.length; i++) {
+        if(radio[i].checked) {
+
+            let totalTip = bill.value * radio[i].value / 100;
+            let tipPerPerson = totalTip / numberPeople.value;
+
+            let billPerPerson = bill.value / numberPeople.value;
+            let totalPerPerson = billPerPerson + tipPerPerson;
+            
+            alert(totalPerPerson);
+            
+        }   
+    }
+}
+
+// Event listener for last input (number of people) being field
+numberPeople.addEventListener('blur', () => {
+
+    getRadioValue();
+ 
+});
 
