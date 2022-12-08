@@ -1,6 +1,7 @@
 /* Colors */
 :root {
     --strongCyan: hsl(172, 67%, 45%);
+    --lightCyan: hsl(177, 68%, 72%);
     --veryDarkCyan: hsl(183, 100%, 15%);
     --darkGrayishCyan: hsl(186, 14%, 43%);
     --grayishCyan: hsl(184, 14%, 56%);
@@ -129,8 +130,12 @@ html {
     font-size: 1em;
     text-align: center;
 }
-
-.tip-options input[type="text"]::placeholder {
+.custom-tip:focus-visible {
+    background-color: var(--white);
+    border: 1px solid var(--lightCyan);
+    color: var(--veryDarkCyan);
+}
+.custom-tip::placeholder {
     color: var(--white);
     padding: 3%;
     font-size: 0.9em;
@@ -166,7 +171,7 @@ html {
     position: absolute;
     right: 10%;
     top: 20%;
-    font-size: 1.5em;
+    font-size: 1em;
     color: var(--strongCyan);
 }
 
@@ -190,8 +195,8 @@ html {
     color: var(--lightGrayishCyan);
 }
 
-.tip-result input[type='button'] {
-    margin-top: 10%;
+.reset-bt{
+    margin-top: 40%;
     border-style: none;
     border-radius: 3px;
     padding: 3%;
@@ -199,6 +204,16 @@ html {
     color: var(--veryDarkCyan);
     font-family: var(--fontMono);
     text-transform: uppercase;
+    transition: 0.2s all;
+}
+
+.reset-bt:hover {
+    cursor: pointer;
+    background-color: var(--lightCyan);
+}
+
+.reset-bt:focus {
+    transform: scale(0.93);
 }
 
 /* Mobile devices */
@@ -221,7 +236,7 @@ html {
     }
 
     .tip-result output {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     .tip-result-labels p {
@@ -268,7 +283,7 @@ html {
     }
 
     .tip-result output {
-        font-size: 2em;
+        font-size: 1em;
     }
 
     .tip-result-labels label {
@@ -320,7 +335,7 @@ html {
     }
 
     .tip-result output {
-        font-size: 2em;
+        font-size: 1em;
     }
 
     .tip-result-labels label {
@@ -347,7 +362,7 @@ html {
     }
 
     .index-form {
-        width: 40%; 
+        width: 43%; 
         border-radius: 20px;
         padding: 3%;
         display: flex;
@@ -375,7 +390,7 @@ html {
     }
 
     .tip-result output {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .tip-result-labels label {
@@ -388,7 +403,7 @@ html {
     }
 
     .tip-result input[type='button'] {
-        margin-top: 60%;
+        margin-top: 50%;
         font-size: 0.8em;
     }
 }

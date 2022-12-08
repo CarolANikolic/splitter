@@ -18,7 +18,7 @@
 
     <!-- Content -->
     <main class="main-index-container">
-        <form class="index-form">
+        <form class="index-form" id="index-form">
             <!-- Section with user input -->
             <section class="section-input">
                 <div class="bill">
@@ -30,22 +30,23 @@
                 <div class="tip-selection">
                     <label for="select-tip" class="label-input">Select tip</label>
                     <div  class="tip-options">
+                        
                         <input type="radio" value="5" name="tip-buttons" id="five">
                         <label for="five">5%</label>
-
+                           
                         <input type="radio" value="10" name="tip-buttons" id="ten">
                         <label for="ten">10%</label>
 
                         <input type="radio" value="15" name="tip-buttons" id="fifteen">
                         <label for="fifteen">15%</label>
-
+                       
                         <input type="radio" value="25" name="tip-buttons" id="twenty-five">
                         <label for="twenty-five">25%</label>
-                        
+
                         <input type="radio" value="50" name="tip-buttons" id="fifty">
                         <label for="fifty">50%</label>
 
-                        <input type="text" name="select-tip" id="custom" placeholder="Custom">
+                        <input type="text" name="select-tip" id="custom" placeholder="Custom" class="custom-tip">
                     </div>
                 </div>
 
@@ -62,15 +63,15 @@
                     <div class="tip-result-labels">
                         <label for="amount-tip">Tip amount</label>
                         <p> / person</p>
-                        <output type="number" name="amount-tip">$</output>
+                        <output type="number" name="amount-tip" id="output-tip">$</output>
                     </div>
                     
                     <div class="tip-result-labels">
                         <label for="total">Total</label>
                         <p> / person</p>
-                        <output type="number" name="total">$</output>
+                        <output type="number" name="total" id="output-total">$</output>
 
-                        <input type="button" value="Reset">
+                        <input type="reset" value="Reset" class="reset-bt">
                     </div>
                 </div>
             </section>
