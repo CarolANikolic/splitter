@@ -21,44 +21,38 @@
         <form class="index-form" id="index-form">
             <!-- Section with user input -->
             <section class="section-input">
+                <!-- Bill input field -->
                 <div class="bill">
                     <label for="bill" class="label-input">Bill</label>
-                    <input type="text" name="bill" class="text-bill" id="bill" placeholder="$">
+                    <input type="number" name="bill" class="text-bill" id="bill" placeholder="$">
                     <span class="warning" id="warning-bill"></span>
                 </div>
 
+                <!-- Default and custom tip buttons  -->
                 <div class="tip-selection">
-                    <label for="select-tip" class="label-input">Select tip</label>
                     <div  class="tip-options">
-                        
-                        <input type="radio" value="5" name="tip-buttons" id="five">
-                        <label for="five">5%</label>
-                           
-                        <input type="radio" value="10" name="tip-buttons" id="ten">
-                        <label for="ten">10%</label>
-
-                        <input type="radio" value="15" name="tip-buttons" id="fifteen">
-                        <label for="fifteen">15%</label>
-                       
-                        <input type="radio" value="25" name="tip-buttons" id="twenty-five">
-                        <label for="twenty-five">25%</label>
-
-                        <input type="radio" value="50" name="tip-buttons" id="fifty">
-                        <label for="fifty">50%</label>
-
+                        <button type="button" value="5" class="bt-tip" >5%</button>
+                        <button type="button" value="10" class="bt-tip">10%</button>
+                        <button type="button" value="15" class="bt-tip">15%</button>
+                        <button type="button" value="25" class="bt-tip">25%</button>
+                        <button type="button" value="50" class="bt-tip">50%</button>
                         <input type="text" name="select-tip" id="custom" placeholder="Custom" class="custom-tip">
+                        <span id="tip" class="tip"></span>
                     </div>
+                    <span class="warning" id="warning-custom"></span>
                 </div>
-
+                
+                <!-- Number of people input field -->
                 <div class="number-people">
                     <label for="number-people" class="label-input">Number of people</label>
-                    <input type="number" name="number-people" min="1" class="text-people" id="number-people" placeholder="0">
+                    <input type="number" name="number-people" min="1" class="text-people" id="number-people" placeholder="0"> 
                     <span class="warning" id="warning-number-people"></span>
                 </div>
             </section>
 
             <!-- Section with result output -->
             <section class="section-output">
+                <!-- Result of total tip per person -->
                 <div class="tip-result">
                     <div class="tip-result-labels">
                         <label for="amount-tip">Tip amount</label>
@@ -66,12 +60,14 @@
                         <output type="number" name="amount-tip" id="output-tip">$</output>
                     </div>
                     
+                    <!-- Result of total bill including tip per person -->
                     <div class="tip-result-labels">
                         <label for="total">Total</label>
                         <p> / person</p>
                         <output type="number" name="total" id="output-total">$</output>
 
-                        <input type="reset" value="Reset" class="reset-bt">
+                        <!-- Reset button -->
+                        <input type="reset" value="Reset" class="reset-bt" id="reset-bt">
                     </div>
                 </div>
             </section>

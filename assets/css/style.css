@@ -23,9 +23,21 @@ html {
 }
 
 /* Warning span */
+
 .warning {
     color: tomato;
     font-size: 0.5em;
+    width: 100px;
+}
+ 
+/* Moving that saves value */
+.tip {
+    width: 0;
+    position: absolute;
+    left: -999999;
+    top: -999999;
+    background-color: red;
+    color: blue;
 }
 
 .index-logo {
@@ -102,7 +114,7 @@ html {
 .tip-options {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 3%;
+    padding-top: 5%;
     padding-bottom: 5%;
     gap: 8% 3%;
     justify-items: left; 
@@ -111,15 +123,8 @@ html {
     position: relative;
 }
 
-/* Make the circle of the input radio button invisible */
- input[type="radio"] {
-    opacity: 0;
-    position: fixed;
-    width: 0;
-  }
-
-/* Style the button by styling the label so it gets the desired visual */
-  .tip-options label, .tip-options input {
+/* Styling buttons */
+  .bt-tip, .custom-tip {
     background-color: var(--veryDarkCyan);
     width: 100%;
     border-style: none;
@@ -130,28 +135,26 @@ html {
     font-size: 1em;
     text-align: center;
 }
-.custom-tip:focus-visible {
-    background-color: var(--white);
+
+.custom-tip:focus {
+    background-color: var(--strongCyan);
     border: 1px solid var(--lightCyan);
     color: var(--veryDarkCyan);
 }
+
 .custom-tip::placeholder {
     color: var(--white);
     padding: 3%;
     font-size: 0.9em;
 }
 
-.tip-options input:hover {
+.bt-tip:hover {
     cursor: pointer;
 }
 
-.tip-options > input:nth-child(6) {
-    background-color: var(--veryLightGrayishCyan);
-    color: var(--veryDarkCyan);   
-}
-
-.tip-options > input:nth-child(6) {
-    text-align: center;
+.bt-tip:focus {
+    background-color:var(--strongCyan);
+    color: var(--veryDarkCyan);
 }
 
 .number-people {
