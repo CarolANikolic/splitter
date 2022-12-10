@@ -19,8 +19,6 @@ const outputTotal = document.getElementById('output-total');
 // Get reset button
 const reset = document.getElementById('reset-bt');
 
-
-
 // Add event listener for people input field
 numberPeople.addEventListener('keyup', () => {
     verifyPeople();
@@ -246,4 +244,3 @@ reset.addEventListener('click', () => {
     outputTotal.innerHTML = '$';
 
 });
-

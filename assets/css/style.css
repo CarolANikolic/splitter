@@ -23,21 +23,10 @@ html {
 }
 
 /* Warning span */
-
 .warning {
     color: tomato;
     font-size: 0.5em;
     width: 100px;
-}
- 
-/* Moving that saves value */
-.tip {
-    width: 0;
-    position: absolute;
-    left: -999999;
-    top: -999999;
-    background-color: red;
-    color: blue;
 }
 
 .index-logo {
@@ -81,23 +70,13 @@ html {
     padding-bottom: 3%;
 }
 
-.text-bill, .number-people > input {
-    background-color: var(--veryLightGrayishCyan);
-    position: relative;
-    padding: 3%;
-    border: none;
-    border-radius: 10px;
+/* Add icon images on bill and number of people input background */
+.text-bill {
+    background: url(../images/icon-dollar.svg) var(--veryLightGrayishCyan);
 }
 
-.text-bill:hover, .number-people:hover {
-    cursor: pointer;
-}
-
-.text-bill::placeholder, .text-people::placeholder {
-    text-align: left;
-    font-family: var(--fontMono);
-    color: var(--grayishCyan);
-    font-size: 1em;
+.text-people {
+    background: url(../images/icon-person.svg) var(--veryLightGrayishCyan);
 }
 
 .text-bill, .text-people {
@@ -105,6 +84,16 @@ html {
     color: var(--veryDarkCyan);
     font-family: var(--fontMono);
     font-size: 1em;
+    background-repeat: no-repeat; /* Defines if icon should repeat once positioned */
+    background-position: 1rem; /* Set background icon position*/
+    padding: 3%;
+    border: none;
+    border-radius: 10px;
+}
+
+ /* Add hover states */
+.text-bill:hover, .number-people:hover {
+    cursor: pointer;
 }
 
 .tip-selection {
@@ -163,6 +152,7 @@ html {
     flex-direction: column;
 }
 
+/* Style of result (output fields) */
 .tip-result {
     background-color: var(--veryDarkCyan);
     box-sizing: border-box;
@@ -198,6 +188,7 @@ html {
     color: var(--lightGrayishCyan);
 }
 
+/* Reset button style */
 .reset-bt{
     margin-top: 40%;
     border-style: none;
@@ -246,7 +237,7 @@ html {
         font-size: 0.5em;
     }
 
-    .tip-result input[type='button'] {
+    .tip-result input[type='reset'] {
         font-size: 0.8em;
     }
 }
@@ -383,7 +374,7 @@ html {
         
     }
 
-    .tip-options input[type=button] {
+    .tip-options input[type=reset] {
         font-size: 1em;
         width: 100%;
     }
@@ -410,29 +401,3 @@ html {
         font-size: 0.8em;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
