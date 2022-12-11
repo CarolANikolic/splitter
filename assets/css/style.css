@@ -64,6 +64,19 @@ html {
     flex-direction: column;
 }
 
+/* Removes arrows from input type number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
   /* Labels style */
 .label-input {
     color: var(--darkGrayishCyan);
@@ -166,6 +179,7 @@ html {
     top: 20%;
     font-size: 1em;
     color: var(--strongCyan);
+   
 }
 
 .tip-result > div:nth-child(2) {
