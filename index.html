@@ -58,17 +58,25 @@
                     <div class="tip-result-labels">
                         <label for="amount-tip">Tip amount</label>
                         <p> / person</p>
-                        <output type="number" name="amount-tip" id="output-tip">$</output>
                     </div>
+                    <div class="results">
+                        <output type="number" name="amount-tip" id="output-tip">$</output>
+                    </div>     
                     
                     <!-- Result of total bill including tip per person -->
                     <div class="tip-result-labels">
                         <label for="total">Total</label>
                         <p> / person</p>
-                        <output type="number" name="total" id="output-total">$</output>
-                        <!-- Reset button -->
-                        <input type="reset" value="Reset" class="reset-bt" id="reset-bt">
                     </div>
+
+                        <div class="results">
+                            <output type="number" name="total" id="output-total">$</output>
+                        </div>  
+                </div>
+                
+                 <!-- Reset button -->
+                <div class="reset-container">
+                    <input type="reset" value="Reset" class="reset-bt" id="reset-bt"> 
                 </div>
             </section>
         </form>
