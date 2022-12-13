@@ -18,7 +18,7 @@ To work with the code, you will need, before you begin, to install in your machi
 > Use of forEach method to iterate through buttons<br>  
 > Work with svg images
 
-<img src="assets/images/screenshots/splitter-responsive.gif" width=50% alt="Gif showing the responsiveness of splitter calculator">
+<img src="assets/images/screenshots/splitter-responsive.gif" width=80% alt="Gif showing the responsiveness of splitter calculator">
 
 ## Contributors
 
