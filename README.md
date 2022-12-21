@@ -2,7 +2,7 @@
 
 <img src="assets/images/screenshots/splitter-calculating.gif" width=100% alt="splitter on calculating on desktop view">
 
-Splitter is a tip calculator that allows you to choose from default tip percetages or to customize the tip. This application will automatically calculate the total value of the tip per person as well as the total value of tip plus the bill.
+Splitter is a tip calculator that allows you to choose from default tip percentages or to customize the tip. This application automatically calculates the total value of the tip per person as well as the total value of tip plus the bill.
 The purpose of this project is to test my abilities in HTML, CSS and JS.
 
 ## Technologies used :hammer_and_wrench:
